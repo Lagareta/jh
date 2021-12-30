@@ -76,17 +76,14 @@ TP 4 :
 
 Etape 6 :
 
-- Il faut une clef API pour acceder à Meteo Concept car il nous est demandé de créer un compte. 
-- https://api.meteo-concept.com/api/ephemeride/1?token=[ CLEF API ]&latlng=[ LATITUDE ],[ LONGITUDE ]
+- Il faut une clef API pour acceder à Meteo Concept car il nous est demandé de créer un compte.
 
-- La méthode HTTP qui est utilisée est GET
+- Il faut appeler : https://api.meteo-concept.com/api/forecast/daily?token=97ecc6007f7d58f4fe7d350e7409f973f549937a3d04e0971333a4c4fcb5fdc7&latlng=latitude,longitude"
 
-- Les paramètres sont ajoutés à l'URL. L'énumération des paramètres commence après le point d'intérogation, il sont souvent accompagnés d'une valeur et on retrouve une séparation matérialisée par un "&"
+- L'API fonctionne en GET, donc il faut utiliser cette méthode.
 
-- Touteles informations lier a la météo sont recupéré dans l'application grace a l'API Meteo Consept
+- Pour passer les paramètres d'appels, il faut les placer après le "=" dans l'url.
 
-- Pour afficher la température du lieu visé par les coordonnées GPS
-  On va trouver l'information lier a la température dans l'objet JSONItemForecastMeteoConcept avec les methodes getTmin() et getTmax()
+- Pour afficher la température du lieu visé par les coordonnées GPS, on va récupérer les températures min et max disponibles dans l'API Meteo Concepet. On établi une classe permettant de définir ces paramètres afin de pouvoir les afficher sur une page html en fonction de l'adresse (ville) rentrée par l'utilisateur.
 
-- Pour afficher la prévision de météo du lieu visé par les coordonnées GPS
-  Les prévisons sont stockers dans l'objet JSONMeteoConcept où l'on peut récupéré une collection d'objet JSONItemForecastMeteoConcept qui représente chaque jour a partir d'aujourd'hui jusqu'a 2 semaines
+- Pour afficher la prévision de météo du lieu visé par les coordonnées GPS, on va récupérer les jours et les prévisions météorologiques telle que la probabilité de pluie disponibles dans l'API Meteo Concepet. On établi une classe permettant de définir ces paramètres afin de pouvoir les afficher sur une page html en fonction de l'adresse (ville) rentrée par l'utilisateur.
