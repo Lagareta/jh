@@ -76,8 +76,7 @@ TP 4 :
 
 Etape 6 :
 
-- Oui, en effet il est nessesaire d'avoir une clef API pour acceder au service car l'oganisation qui gère le système proposer des offres onéreuse en plus d'une offre basique (gratuite) qui se trouve être utiliser dans ce devoir. Pour ce faire, il est nessesaire de crée un compte.
-
+- Il faut une clef API pour acceder à Meteo Concept car il nous est demandé de créer un compte. 
 - https://api.meteo-concept.com/api/ephemeride/1?token=[ CLEF API ]&latlng=[ LATITUDE ],[ LONGITUDE ]
 
 - La méthode HTTP qui est utilisée est GET
