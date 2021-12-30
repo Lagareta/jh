@@ -25,7 +25,7 @@ public class MeteoController {
         System.out.println("\n\nParametre URL : " + adresseMeteo);
         URL url;
 
-        // API data gouv
+      
         url = new URL("https://api-adresse.data.gouv.fr/search/?q=" + adresseMeteo);
         Etalab localisation = new ObjectMapper().readValue(url, Etalab.class);
 
