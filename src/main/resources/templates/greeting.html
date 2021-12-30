@@ -1,0 +1,20 @@
+<! DOCTYPE HTML >
+<html xmlns:th=" http://www.thymeleaf.org ">
+<link th:href="@{/CSS/bootstrap.min.css}" rel="stylesheet">
+<head>
+    <title > Blog </title>
+    <meta http-equiv = "Content-Type" content =" text/html ;charset =UTF-8" />
+</head>
+<body>
+    <p th:text ="'Bonjour ' + ${ nomTemplate } + ' ! '" />
+    <div th:replace="fragments/headers :: header"> </div>
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="http://localhost:9090/addresses">addresses</a>
+    </nav>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="http://localhost:9090/formulaire">formulaire</a>
+    </nav>
+        <div th:replace="~{fragments/footer :: footer}"> </div>
+</body>
+</html>

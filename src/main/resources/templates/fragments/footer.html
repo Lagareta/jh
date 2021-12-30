@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<link th:href="@{/CSS/bootstrap.min.css}" rel="stylesheet">
+<head>
+    ...
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" th:fragment="footer">
+    <div class="container">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li th:classappend="${module == 'home' ? 'active' : ''}">
+                    <a href="http://localhost:9090/greeting" th:href="@{/}">greeting</a>
+                </li>
+                <li th:classappend="${module == 'tasks' ? 'active' : ''}">
+                    <a href="http://localhost:9090/addresses" th:href="@{/task}">addresses</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
